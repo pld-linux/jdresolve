@@ -38,7 +38,7 @@ hostname, thru a user defined mask.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-make install \
+%{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	BINDIR=%{_bindir} \
 	USER=`id -u` \
