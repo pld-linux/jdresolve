@@ -7,6 +7,7 @@ Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.jdrowell.com/files/%{name}-%{version}.tar.gz
+# Source0-md5:	916a1e0023d2d18e2b2e8efd4efe23c5
 Patch0:		%{name}-noroot.patch
 Url:		http://www.jdrowell.com/Linux/Projects/jdresolve/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
