@@ -6,8 +6,6 @@ Version:	0.6.1
 Release:	2
 License:	GPL
 Group:		Development/Languages
-Group(de):	Entwicklung/Sprachen
-Group(pl):	Programowanie/Jêzyki
 Source0:	http://www.jdrowell.com/files/%{name}-%{version}.tar.gz
 Patch0:		%{name}-noroot.patch
 Url:		http://www.jdrowell.com/Linux/Projects/jdresolve
