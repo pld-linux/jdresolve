@@ -10,6 +10,8 @@ Source0:	http://www.jdrowell.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	916a1e0023d2d18e2b2e8efd4efe23c5
 Patch0:		%{name}-noroot.patch
 URL:		http://www.jdrowell.com/Linux/Projects/jdresolve/
+BuildRequires:	perl-Net-DNS 
+BuildRequires:	rpm-perlprov
 Requires:	perl-DB_File
 Requires:	perl-Net-DNS >= 0.12
 BuildArch:	noarch
