@@ -2,7 +2,7 @@
 Summary:	jdresolve resolves IP addresses into hostnames with recursion
 Name:		jdresolve
 Version:	0.6.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Group(pl):	Programowanie/Jêzyki
