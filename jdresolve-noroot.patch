@@ -1,22 +1,19 @@
---- jdresolve-0.5.2/Makefile.wiget	Sun Aug 22 15:10:24 1999
-+++ jdresolve-0.5.2/Makefile	Fri Apr 14 13:03:30 2000
-@@ -1,12 +1,14 @@
- prefix=/usr
- INSTALL=/usr/bin/install
- BINDIR=$(prefix)/bin
-+USER=bin
-+GROUP=bin
- 
- none: 
+--- jdresolve-0.6.1/Makefile.orig	Mon Oct 16 11:43:31 2000
++++ jdresolve-0.6.1/Makefile.in	Sun Jan  6 10:18:15 2002
+@@ -12,12 +12,12 @@
+ 	for FILE in AUTHORS README BUGS CHANGELOG CREDITS INSTALL TODO; do lynx --dump "$$FILE.html" | perl -ne "! /^Looking/ and print" > "$$FILE"; done
  
  install:
--	$(INSTALL) -m 555 -o bin -g bin jdresolve $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 555 -o bin -g bin jdresolve-dumpdb $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 555 -o bin -g bin jdresolve-mergedb $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 555 -o bin -g bin jdresolve-unresolved $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 555 -o bin -g bin rhost $(DESTDIR)$(BINDIR)
-+	$(INSTALL) -m 555 -o $(USER) -g $(GROUP) jdresolve $(DESTDIR)$(BINDIR)
-+	$(INSTALL) -m 555 -o $(USER) -g $(GROUP) jdresolve-dumpdb $(DESTDIR)$(BINDIR)
-+	$(INSTALL) -m 555 -o $(USER) -g $(GROUP) jdresolve-mergedb $(DESTDIR)$(BINDIR)
-+	$(INSTALL) -m 555 -o $(USER) -g $(GROUP) jdresolve-unresolved $(DESTDIR)$(BINDIR)
-+	$(INSTALL) -m 555 -o $(USER) -g $(GROUP) rhost $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m 755 -o bin -g bin jdresolve $(DESTDIR)$(BINDIR)
+-	$(INSTALL) -m 755 -o bin -g bin rhost $(DESTDIR)$(BINDIR)
++	$(INSTALL) -m 755 jdresolve $(DESTDIR)$(BINDIR)
++	$(INSTALL) -m 755 rhost $(DESTDIR)$(BINDIR)
+ 
+ 	mkdir -p $(DESTDIR)$(MANDIR)
+-	$(INSTALL) -m 644 -o bin -g bin jdresolve.1 $(DESTDIR)$(MANDIR)
+-	$(INSTALL) -m 644 -o bin -g bin rhost.1 $(DESTDIR)$(MANDIR)
++	$(INSTALL) -m 644 jdresolve.1 $(DESTDIR)$(MANDIR)
++	$(INSTALL) -m 644 rhost.1 $(DESTDIR)$(MANDIR)
+ 
+ uninstall:
+ 	rm $(DESTDIR)$(BINDIR)/jdresolve
