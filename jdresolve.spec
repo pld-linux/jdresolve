@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	jdresolve resolves IP addresses into hostnames with recursion
 Name:		jdresolve
-Version:	0.5.2
-Release:	2
+Version:	0.6.1
+Release:	1
 License:	GPL
 Group:		Development/Languages
 Group(pl):	Programowanie/Jêzyki
@@ -30,17 +30,20 @@ hostname, thru a user defined mask.
 
 %prep
 %setup  -q
-%patch0 -p1
+%patch0 -p1 -b .wiget
 
 %build
+sh configure
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	BINDIR=%{_bindir} \
+	MANDIR=%{_mandir}/man1 \
 	USER=`id -u` \
 	GROUP=`id -g`
 
@@ -52,8 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {CHANGELOG,CREDITS,README,TODO}.gz
-%attr(755,root,root) %{_bindir}/jdresolve
-%attr(755,root,root) %{_bindir}/jdresolve-dumpdb
-%attr(755,root,root) %{_bindir}/jdresolve-mergedb
-%attr(755,root,root) %{_bindir}/jdresolve-unresolved
-%attr(755,root,root) %{_bindir}/rhost
+%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/*
