@@ -15,18 +15,18 @@ Requires:	perl-Net-DNS >= 0.12
 BuildArch:	noarch
 
 %description
-The jdresolve application resolves IP addresses into hostnames. To reduce
-the time necessary to resolve large batches of addresses, jdresolve opens
-many concurrent connections to the DNS servers, and keeps a large number of
-text lines in memory. These lines can have any content, as long as the IP
-addresses are the first field to the left. This is usually the case with
-most formats of HTTP and FTP log files.
+The jdresolve application resolves IP addresses into hostnames. To
+reduce the time necessary to resolve large batches of addresses,
+jdresolve opens many concurrent connections to the DNS servers, and
+keeps a large number of text lines in memory. These lines can have any
+content, as long as the IP addresses are the first field to the left.
+This is usually the case with most formats of HTTP and FTP log files.
 
 For addresses that can't be resolved due to timeouts or incorrectly
-configured reverse mappings, a recursive algorithm is available. A search
-is made for the parent domains (classes C, B and A) of the IP address and
-those domain names become available for composing a fake hostname, thru a
-user defined mask.
+configured reverse mappings, a recursive algorithm is available. A
+search is made for the parent domains (classes C, B and A) of the IP
+address and those domain names become available for composing a fake
+hostname, thru a user defined mask.
 
 %prep
 %setup  -q
@@ -38,14 +38,13 @@ user defined mask.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-make \
+make install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	BINDIR=%{_bindir} \
 	USER=`id -u` \
-	GROUP=`id -g` \
-	install
+	GROUP=`id -g`
 
-gzip -9fn CHANGELOG CREDITS README  TODO
+gzip -9nf CHANGELOG CREDITS README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
