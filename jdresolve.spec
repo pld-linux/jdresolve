@@ -60,13 +60,11 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 	USER=`id -u` \
 	GROUP=`id -g`
 
-gzip -9nf CHANGELOG CREDITS README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {CHANGELOG,CREDITS,README,TODO}.gz
+%doc CHANGELOG CREDITS README TODO
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
