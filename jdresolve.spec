@@ -8,7 +8,7 @@ License:	GPL
 Group:		Development/Languages
 Source0:	http://www.jdrowell.com/files/%{name}-%{version}.tar.gz
 Patch0:		%{name}-noroot.patch
-Url:		http://www.jdrowell.com/Linux/Projects/jdresolve
+Url:		http://www.jdrowell.com/Linux/Projects/jdresolve/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	perl >= 5.004
 Requires:	perl-Net-DNS >= 0.12
