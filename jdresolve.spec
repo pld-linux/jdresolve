@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	jdresolve resolves IP addresses into hostnames with recursion
-Summary(pl):	T³umaczenie adresów IP na nazwy z rekurencj±
+Summary(pl.UTF-8):   TÅ‚umaczenie adresÃ³w IP na nazwy z rekurencjÄ…
 Name:		jdresolve
 Version:	0.6.1
 Release:	4
@@ -31,19 +31,19 @@ search is made for the parent domains (classes C, B and A) of the IP
 address and those domain names become available for composing a fake
 hostname, thru a user defined mask.
 
-%description -l pl
-Program jdresolve t³umaczy adresy IP na nazwy komputerów. Aby
-zmniejszyæ czas potrzebny na przet³umaczenie du¿ych partii adresów,
-jdresolve otwiera wiele jednoczesnych po³±czeñ do serwerów DNS,
-trzymaj±c wiele linii tekstu w pamiêci. Te linie mog± mieæ dowoln±
-zawarto¶æ, pod warunkiem, ¿e adresy IP s± pierwszym polem od lewej.
-Tak jest zazwyczaj w przypadku wiêkszo¶ci formatów logów HTTP i FTP.
+%description -l pl.UTF-8
+Program jdresolve tÅ‚umaczy adresy IP na nazwy komputerÃ³w. Aby
+zmniejszyÄ‡ czas potrzebny na przetÅ‚umaczenie duÅ¼ych partii adresÃ³w,
+jdresolve otwiera wiele jednoczesnych poÅ‚Ä…czeÅ„ do serwerÃ³w DNS,
+trzymajÄ…c wiele linii tekstu w pamiÄ™ci. Te linie mogÄ… mieÄ‡ dowolnÄ…
+zawartoÅ›Ä‡, pod warunkiem, Å¼e adresy IP sÄ… pierwszym polem od lewej.
+Tak jest zazwyczaj w przypadku wiÄ™kszoÅ›ci formatÃ³w logÃ³w HTTP i FTP.
 
-Dla adresów, które nie mog± byæ przet³umaczone z powodu timeoutów lub
-¼le skonfigurowanych stref odwrotnych, dostêpny jest algorytm
-rekurencyjny: szukane s± domeny nadrzêdne (klasy C, B, A) adresu IP, a
-te nazwy domen s± u¿ywane do tworzenia fa³szywych nazw hostów, z
-u¿yciem maski zdefiniowanej przez u¿ytkownika.
+Dla adresÃ³w, ktÃ³re nie mogÄ… byÄ‡ przetÅ‚umaczone z powodu timeoutÃ³w lub
+Åºle skonfigurowanych stref odwrotnych, dostÄ™pny jest algorytm
+rekurencyjny: szukane sÄ… domeny nadrzÄ™dne (klasy C, B, A) adresu IP, a
+te nazwy domen sÄ… uÅ¼ywane do tworzenia faÅ‚szywych nazw hostÃ³w, z
+uÅ¼yciem maski zdefiniowanej przez uÅ¼ytkownika.
 
 %prep
 %setup  -q
