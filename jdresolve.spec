@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	jdresolve resolves IP addresses into hostnames with recursion
-Summary(pl.UTF-8):   Tłumaczenie adresów IP na nazwy z rekurencją
+Summary(pl.UTF-8):	Tłumaczenie adresów IP na nazwy z rekurencją
 Name:		jdresolve
 Version:	0.6.1
 Release:	4
